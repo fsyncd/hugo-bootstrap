@@ -1,0 +1,13 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        {{- range (seq 0 2 (sub (len .Params) 1)) }}
+            {{- $crumb := $.Get . }}
+            {{ if eq . (sub (len $.Params) 1) }}
+            <li class="breadcrumb-item active" aria-current="page">{{ $crumb }}</li>
+            {{ else }}
+                {{- $href := $.Get (add . 1) }}
+               <li class="breadcrumb-item"><a href="{{ $href }}">{{ $crumb }}</a></li>
+            {{ end }}        
+        {{ end }}
+    </ol>
+</nav>
