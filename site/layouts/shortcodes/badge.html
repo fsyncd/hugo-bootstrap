@@ -1,1 +1,1 @@
-{{if (.Get "href")}}<a href="{{ .Get "href" }}"{{else}}<span{{end}} class="badge {{ if eq (.Get "pill") true}}badge-pill{{end}} badge-{{ default "primary" (.Get "level") }}">{{ .Inner }}{{if (.Get "href")}}</a>{{else}}</span>{{end}}
+{{if (.Get "href")}}<a href="{{ .Get "href" }}"{{else}}<span{{end}} class="badge {{ if eq (.Get "pill") true}}badge-pill{{end}} badge-{{ default "primary" (.Get "level") }} {{ .Get "classes" }}">{{ .Inner }}{{if (.Get "href")}}</a>{{else}}</span>{{end}}

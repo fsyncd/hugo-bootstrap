@@ -1,0 +1,10 @@
+<div class="card {{ .Get "classes" }}">
+    {{ with (.Get "image")}}
+        <img src="{{.}}" class="card-img-top" {{ with ($.Get "caption") }}alt="{{.}}"{{ end }}>
+    {{ end }}
+    {{ if .Inner}}
+        <div class="card-body">
+            {{ .Inner }}
+        </div>
+    {{ end }}
+</div>

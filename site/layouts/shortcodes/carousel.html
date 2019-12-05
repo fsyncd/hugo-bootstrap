@@ -1,0 +1,30 @@
+<div id="{{ .Get "id" }}" class="carousel slide {{ .Get "classes" }}" data-ride="carousel">
+    {{ if eq (.Get "indicators") true }}
+        <ol class="carousel-indicators">
+            {{ $images := (split (.Get "images") "|") }}
+            {{ range seq 0 (sub (len $images) 1) }}
+                <li data-target="#{{ $.Get "id" }}" data-slide-to="{{ . }}" class="{{ if eq ($.Get "active") (index $images .) }}active{{ end }}"></li>
+            {{ end }}
+        </ol>
+    {{ end }}
+
+    <div class="carousel-inner">
+        {{ $images := (split (.Get "images") "|") }}
+        {{ range $images }}
+            <div class="carousel-item {{ if eq ($.Get "active") . }} active{{ end }}">
+                <img src="{{ . }}" class="d-block w-100">
+            </div>
+        {{ end }}
+    </div>
+
+    {{ if eq (.Get "controls") true }}
+        <a class="carousel-control-prev" href="#{{ $.Get "id" }}" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#{{ $.Get "id" }}" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    {{ end }}
+</div>

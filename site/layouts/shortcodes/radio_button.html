@@ -1,0 +1,8 @@
+<div class="btn-group btn-group-toggle {{ .Get "classes" }}" data-toggle="buttons">
+    {{ $values := (split (.Get "values") "|") }}
+    {{ range $values }}
+        <label class="btn btn-secondary {{ if eq ($.Get "active") . }} active{{ end }}">
+            <input type="radio" name="options" autocomplete="off" {{ if eq ($.Get "active") . }}checked{{ end }}>{{ . }}
+        </label>
+    {{ end }}
+</div>

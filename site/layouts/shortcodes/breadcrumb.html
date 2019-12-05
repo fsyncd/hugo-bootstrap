@@ -1,4 +1,4 @@
-<nav aria-label="breadcrumb">
+<nav aria-label="breadcrumb" class="{{ .Get "classes" }}">
     <ol class="breadcrumb">
         {{- range (seq 0 2 (sub (len .Params) 1)) }}
             {{- $crumb := $.Get . }}

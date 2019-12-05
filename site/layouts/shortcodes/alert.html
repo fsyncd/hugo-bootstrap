@@ -1,4 +1,4 @@
-<div class="alert alert-{{ default "primary" (.Get "level") }}" role="alert">
+<div class="alert alert-{{ default "primary" (.Get "level") }} {{ .Get "classes" }}" role="alert">
     {{ .Inner }}
     {{ if eq (.Get "closable") true}}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">

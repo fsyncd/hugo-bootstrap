@@ -1,0 +1,7 @@
+<button type="button" class="btn
+{{ if eq (.Get "outline") true}} btn-outline-{{ default "primary" (.Get "level") }}{{ else }} btn-{{ default "primary" (.Get "level") }}{{ end }}
+{{ with (.Get "size") }} btn-{{ . }}{{ end }}
+{{ if eq (.Get "block") true}} btn-lg btn-block{{ end }}
+ {{ .Get "classes" }}">
+    {{ .Inner }}
+</button>
