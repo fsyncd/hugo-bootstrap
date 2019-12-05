@@ -28,23 +28,27 @@ draft = true
 
 ### Inline Buttons
 
-{{< button >}}Primary{{< /button >}}
+{{< button text="Primary">}}
 
-{{< button level="success" >}}Success{{< /button >}}
+{{< button text="Success" level="success" >}}
 
-{{< button level="secondary" outline=true >}}Outline{{< /button >}}
+{{< button text="Outline" level="secondary" outline=true >}}
 
-{{< button size="sm" >}}Small{{< /button >}}
+{{< button text="Small" size="sm" >}}
 
-{{< button size="lg" >}}Large{{< /button >}}
+{{< button text="Large" size="lg" >}}
 
 ### Block Buttons
 
-{{< button block=true >}}Block level button{{< /button >}}
+{{< button text="Block level button" block=true >}}
 
 ### Radio Buttons
 
-{{< radio_button active="Buzz" values="Foo|Bar|Buzz" >}}
+{{< radio_button >}}
+    {{< radio_button_item text="Foo" >}}
+    {{< radio_button_item text="Bar" >}}
+    {{< radio_button_item text="Buzz" active=true >}}
+{{< /radio_button >}}
 
 ## Cards
 
@@ -58,7 +62,7 @@ draft = true
 
 ### Hybrid Card
 
-{{< card image="/img/bootstrap.png" caption="My hybrid card" classes="custom-card" >}}
+{{< card image="/img/hugo.png" caption="My hybrid card" classes="custom-card" >}}
     <h5 class="card-title">Card title</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -67,12 +71,87 @@ draft = true
 
 ## Carousel
 
-{{< carousel id="carousel1" classes="small-carousel" active="/img/bootstrap.png" images="/img/bootstrap.png|/img/hugo.png" >}}
+{{< carousel id="carousel1" classes="custom-carousel" active="/img/bootstrap.png" images="/img/bootstrap.png|/img/hugo.png" >}}
 
-### With Controls
+### Controls
 
-{{< carousel id="carousel2" classes="small-carousel" active="/img/bootstrap.png" images="/img/bootstrap.png|/img/hugo.png" controls=true >}}
+{{< carousel id="carousel2" classes="custom-carousel" active="/img/bootstrap.png" images="/img/bootstrap.png|/img/hugo.png" controls=true >}}
 
-### With Indicators
+### Indicators
 
-{{< carousel id="carousel2" classes="small-carousel" active="/img/bootstrap.png" images="/img/bootstrap.png|/img/hugo.png" indicators=true >}}
+{{< carousel id="carousel3" classes="custom-carousel" active="/img/bootstrap.png" images="/img/bootstrap.png|/img/hugo.png" indicators=true >}}
+
+## Collapse
+
+{{< collapse id="collapse1" classes="custom-collapse" text="Toggle Section" level="success" outline=true >}}
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+{{< /collapse >}}
+
+## Accordion
+
+{{< accordion id="accordion1" classes="custom-accordion" >}}
+    {{< accordion_group parent="accordion1" id="accordion_group1" title="Collapsible Group Item #1" expanded=true >}}
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    {{< /accordion_group >}}
+    {{< accordion_group parent="accordion1" id="accordion_group2" title="Collapsible Group Item #2" >}}
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    {{< /accordion_group >}}
+    {{< accordion_group parent="accordion1" id="accordion_group3" title="Collapsible Group Item #3" >}}
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    {{< /accordion_group >}}
+{{< /accordion >}}
+
+## Dropdown
+
+{{< dropdown id="dropdown1" text="Dropdown button" >}}
+    {{< dropdown_item text="Action" href="#" >}}
+    {{< dropdown_item text="Another action" href="#" >}}
+    {{< dropdown_item text="Something else here" href="#" >}}
+{{< /dropdown >}}
+
+## Jumbotron
+
+{{< jumbotron classes="custom-jumbotron" >}}
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+{{< /jumbotron >}}
+
+### Fluid Jumbotron
+
+{{< jumbotron classes="custom-jumbotron" fluid=true >}}
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+{{< /jumbotron >}}
+
+## List Group
+
+{{< list classes="custom-list" >}}
+    {{< list_item >}}Cras justo odio{{< /list_item >}}
+    {{< list_item active=true >}}Dapibus ac facilisis in{{< /list_item >}}
+    {{< list_item >}}Morbi leo risus{{< /list_item >}}
+    {{< list_item >}}Porta ac consectetur ac{{< /list_item >}}
+    {{< list_item >}}Vestibulum at eros{{< /list_item >}}
+{{< /list >}}
+
+### With Links
+
+{{< list classes="custom-list" >}}
+    {{< list_item href="#" active=true >}}Cras justo odio{{< /list_item >}}
+    {{< list_item href="#" >}}Dapibus ac facilisis in{{< /list_item >}}
+    {{< list_item href="#" >}}Morbi leo risus{{< /list_item >}}
+    {{< list_item href="#" >}}Porta ac consectetur ac{{< /list_item >}}
+    {{< list_item href="#" >}}Vestibulum at eros{{< /list_item >}}
+{{< /list >}}
+
+### Horizontal
+
+{{< list classes="custom-list" horizontal=true >}}
+    {{< list_item href="#" active=true >}}Cras justo{{< /list_item >}}
+    {{< list_item href="#" >}}Dapibus ac{{< /list_item >}}
+    {{< list_item href="#" >}}Morbi leo{{< /list_item >}}
+{{< /list >}}

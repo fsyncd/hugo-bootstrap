@@ -1,0 +1,5 @@
+{{ if .Get "href" }}
+    <a href="{{ .Get "href" }}" class="list-group-item list-group-item-action {{ if eq ($.Get "active") true }}active{{ end }} {{ .Get "classes" }}">{{ .Inner }}</a>
+{{ else }}
+    <li class="list-group-item {{ if eq ($.Get "active") true }}active{{ end }} {{ .Get "classes" }}">{{ .Inner }}</li>
+{{ end }}

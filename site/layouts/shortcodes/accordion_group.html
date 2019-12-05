@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-header" id="{{ .Get "id" }}-heading">
+        <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#{{ .Get "id" }}" aria-expanded="{{ default (.Get "expanded") false }}" aria-controls="{{ .Get "id" }}">
+            {{ .Get "title" }}
+        </button>
+        </h2>
+    </div>
+
+    <div id="{{ .Get "id" }}" class="collapse {{ if eq (.Get "expanded") true}}show{{ end }}" aria-labelledby="{{ .Get "id" }}-heading" data-parent="#{{ .Get "parent" }}">
+        <div class="card-body">
+                {{ .Inner }}
+        </div>
+    </div>
+</div>

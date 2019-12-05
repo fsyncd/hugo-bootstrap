@@ -3,5 +3,5 @@
 {{ with (.Get "size") }} btn-{{ . }}{{ end }}
 {{ if eq (.Get "block") true}} btn-lg btn-block{{ end }}
  {{ .Get "classes" }}">
-    {{ .Inner }}
+    {{ .Get "text" }}
 </button>
