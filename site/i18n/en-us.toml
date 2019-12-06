@@ -3,3 +3,6 @@ other = "status"
 
 [spinner_loading]
 other = "Loading ..."
+
+[button_close]
+other = "close"

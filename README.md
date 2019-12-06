@@ -65,9 +65,8 @@ This command will populate the `/dist` folder with the static content of your Hu
 
 ## Todo
 
-* Bootstrap Popovers
-* Bootstrap Tooltips
-* Bootstrap Utilities eg. grid, etc.
+* Bootstrap Popovers and Tooltips
+* Forms and input groups
 
 ## Acknowledgements
 

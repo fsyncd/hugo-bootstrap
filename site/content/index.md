@@ -4,6 +4,8 @@ date = 2019-12-04T16:10:50+01:00
 draft = true
 +++
 
+# Components
+
 ## Alerts
 
 {{< alert >}}Hello from Hugo Bootstrap!{{< /alert >}}
@@ -222,3 +224,31 @@ Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richa
 ### Growing Spinner
 
 {{< spinner style="spinner-grow" level="success" >}}
+
+# Utilities
+
+## Close Icon
+
+{{< close_icon classes="custom-close-icon mx-2">}}
+
+## Responsive Embed
+
+{{< embed aspect="16by9" classes="custom-embed" >}}
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+{{< /embed >}}
+
+# Layout
+
+## Grid
+
+{{< grid classes="custom-grid bg-light text-primary">}}
+    {{< row >}}
+        {{< col >}}Foo{{< /col >}}
+        {{< col >}}Bar{{< /col >}}
+        {{< col >}}Buzz{{< /col >}}
+    {{< /row >}}
+    {{< row >}}
+        {{< col width="3" >}}Narrow{{< /col >}}
+        {{< col width="9" >}}Wide{{< /col >}}
+    {{< /row >}}
+{{< /grid >}}

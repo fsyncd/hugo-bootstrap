@@ -1,0 +1,3 @@
+<div class="col{{ if eq (.Get "responsive") true}}-sm{{end}}{{ with (.Get "width") }}-{{ . }}{{ end }} {{ .Get "classes" }}">
+    {{ .Inner }}
+</div>
