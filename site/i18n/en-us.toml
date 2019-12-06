@@ -1,0 +1,5 @@
+[spinner_status]
+other = "status"
+
+[spinner_loading]
+other = "Loading ..."

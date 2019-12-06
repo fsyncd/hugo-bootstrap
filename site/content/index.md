@@ -20,9 +20,11 @@ draft = true
 
 ## Breadcrumbs
 
-*TODO refactor arguments?*
-
-{{< breadcrumb "Home" "/" "Library" "/library/" "Data" >}}
+{{< breadcrumb >}}
+    {{< breadcrumb_item text="Home" href="/" >}}
+    {{< breadcrumb_item text="Library" href="/library/" >}}
+    {{< breadcrumb_item text="Data" active=true >}}
+{{< /breadcrumb >}}
 
 ## Buttons
 
@@ -155,3 +157,68 @@ Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richa
     {{< list_item href="#" >}}Dapibus ac{{< /list_item >}}
     {{< list_item href="#" >}}Morbi leo{{< /list_item >}}
 {{< /list >}}
+
+## Media
+
+{{< media image="/img/64px.png" caption="My media element" classes="custom-media" >}}
+    <h5 class="mt-0">Media heading</h5>
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+{{< /media >}}
+
+### Center Aligned
+
+{{< media image="/img/64px.png" caption="My media element" classes="custom-media" align="center" >}}
+    <h5 class="mt-0">Center-aligned media</h5>
+    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+{{< /media >}}
+
+## Navigation
+
+{{< nav >}}
+    {{< nav_item href="#" text="Active" active=true >}}
+    {{< nav_item href="#" text="Link" >}}
+    {{< nav_item href="#" text="Link" >}}
+    {{< nav_item href="#" text="Disabled" disabled=true >}}
+{{< /nav >}}
+
+### With Pills
+
+{{< nav pills=true classes="nav-fill custom-nav" >}}
+    {{< nav_item href="#" text="Active" active=true >}}
+    {{< nav_item href="#" text="Link" >}}
+    {{< nav_item href="#" text="Link" >}}
+    {{< nav_item href="#" text="Disabled" disabled=true >}}
+{{< /nav >}}
+
+## Pagination
+
+{{< pagination >}}
+    {{< pagination_item href="#" disabled=true >}}Previous{{< /pagination_item >}}
+    {{< pagination_item href="#" >}}1{{< /pagination_item >}}
+    {{< pagination_item href="#" active=true >}}2{{< /pagination_item >}}
+    {{< pagination_item href="#" >}}3{{< /pagination_item >}}
+    {{< pagination_item href="#" >}}Next{{< /pagination_item >}}
+{{< /pagination >}}
+
+### With Icons
+
+{{< pagination >}}
+    {{< pagination_item href="#" disabled=true >}}<span aria-hidden="true">&laquo;</span>{{< /pagination_item >}}
+    {{< pagination_item href="#" >}}1{{< /pagination_item >}}
+    {{< pagination_item href="#" active=true >}}2{{< /pagination_item >}}
+    {{< pagination_item href="#" >}}3{{< /pagination_item >}}
+    {{< pagination_item href="#" >}}<span aria-hidden="true">&raquo;</span>{{< /pagination_item >}}
+{{< /pagination >}}
+
+## Progress Bars
+
+{{< progress cur="25" text="25%" classes="custom-progress" >}}
+
+## Spinners
+
+{{< spinner >}}
+
+### Growing Spinner
+
+{{< spinner style="spinner-grow" level="success" >}}

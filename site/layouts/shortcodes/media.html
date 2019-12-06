@@ -1,0 +1,6 @@
+<div class="media {{ .Get "classes" }}">
+    <img src="{{ .Get "image" }}" class="mr-3 {{ with (.Get "align") }}align-self-{{ . }}{{ end }}" {{ with ($.Get "caption") }}alt="{{.}}"{{ end }}>
+    <div class="media-body">
+        {{ .Inner }}
+    </div>
+</div>

@@ -1,5 +1,5 @@
 <nav {{ with (.Get "caption") }}aria-label="{{ . }}"{{ end }} class="{{ .Get "classes" }}">
-    <ol class="breadcrumb">
+    <ol class="pagination">
         {{ .Inner }}
     </ol>
 </nav>

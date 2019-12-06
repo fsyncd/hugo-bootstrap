@@ -1,0 +1,7 @@
+<li class="breadcrumb-item {{ if eq ($.Get "active") true }}active{{ end }} {{ .Get "classes" }}" {{ if eq ($.Get "active") true }}aria-current="page"{{ end }}>
+    {{ if (.Get "href") }}
+        <a href="{{ .Get "href" }}">{{ .Get "text" }}</a>
+    {{ else }}
+        {{ .Get "text" }}
+    {{ end }}
+</li>

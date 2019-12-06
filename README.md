@@ -65,8 +65,9 @@ This command will populate the `/dist` folder with the static content of your Hu
 
 ## Todo
 
-* Hugo shortcodes for Bootstrap UI components.
-* Common Bootstrap layouts.
+* Bootstrap Popovers
+* Bootstrap Tooltips
+* Bootstrap Utilities eg. grid, etc.
 
 ## Acknowledgements
 

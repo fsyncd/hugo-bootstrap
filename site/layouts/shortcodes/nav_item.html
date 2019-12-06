@@ -1,0 +1,3 @@
+<li class="nav-item {{ .Get "classes" }}">
+    <a class="nav-link {{ if eq ($.Get "active") true }}active{{ end }} {{ if eq ($.Get "disabled") true }}disabled{{ end }}" href="{{ .Get "href" }}" {{ if eq ($.Get "disabled") true }}tabindex="-1" aria-disabled="true"{{ end }}>{{ .Get "text" }}</a>
+</li>

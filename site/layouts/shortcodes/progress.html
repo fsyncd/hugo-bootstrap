@@ -1,0 +1,3 @@
+<div class="progress {{ .Get "classes" }}">
+    <div class="progress-bar w-75" role="progressbar" aria-valuenow="{{ .Get "cur" }}" aria-valuemin="{{ default 0 (.Get "min") }}" aria-valuemax="{{ default 100 (.Get "max") }}">{{ .Get "text" }}</div>
+</div>

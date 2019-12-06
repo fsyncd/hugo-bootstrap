@@ -1,0 +1,11 @@
+<li class="page-item {{ if eq ($.Get "active") true }}active{{ end }} {{ if eq ($.Get "disabled") true }}disabled{{ end }} {{ .Get "classes" }}" {{ if eq ($.Get "active") true }}aria-current="page"{{ end }}>
+    {{ if eq ($.Get "disabled") true }}
+        <span class="page-link">
+            {{ .Inner }}
+        </span>
+    {{ else }}
+       <a class="page-link" href="{{ .Get "href" }}">
+            {{ .Inner }}
+        </a>
+    {{ end }}
+</li>
